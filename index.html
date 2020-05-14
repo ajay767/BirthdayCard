@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <title>Birthday Card</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        position: relative;
+        height: 100vh;
+        /* background-color: rgb(248, 117, 10); */
+        background-position: center;
+        background-size: cover;
+        font-family: 'Balsamiq Sans', cursive;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container::before {
+        content: "";
+        background-image: url(my.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        filter: blur(5px);
+    }
+
+    .container {
+        box-shadow: 0px 2px 11px 2px #FF9800;
+        height: 434px;
+        width: 700px;
+        display: flex;
+        justify-content: center;
+        border-radius: 9px;
+        background-color: white;
+    }
+
+    .left,
+    .right {
+        width: 50%;
+        height: 100%;
+    }
+button{
+    margin-top: 50px;
+    height: 35px;
+    width: 112px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(252, 137, 6);
+    color: #502b1f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button:hover{
+    margin-top: 45px;
+    height: 40px;
+    width: 117px;
+    background-color: #502b1f;
+    color: #FF9800;
+}
+    .right {
+        background-color: #ff980069;
+        font-size: 20px;
+        color: #502b1f;
+        border-bottom-right-radius: 9px;
+        border-top-right-radius: 9px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+.img{
+    height: 150px;
+    width: 150px;
+    margin-bottom: 15px;
+}
+.img img{
+    height: 100%;
+    width: 100%;
+}
+    .left {
+        background-color: rgb(250, 195, 85);
+        border-bottom-left-radius: 9px;
+        border-top-left-radius: 9px;
+    }
+
+    .left img {
+        height: 100%;
+        width: 100%;
+
+        border-bottom-left-radius: 9px;
+        border-top-left-radius: 9px;
+    }
+
+@media (max-width:768px){
+    .container{
+        height: 90%;
+        width: 90%;
+        flex-direction: column;
+    }
+    .left , .right{
+        width: 100%;
+    height: 50%;
+    border-radius: 9px;
+    }
+    .left img{
+        border-radius: 0px;
+        border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+    }
+    .right{
+        font-size: 17px;
+    }
+    .img{
+        height: 114px;
+    width: 114px;
+    }
+    button{
+        margin-top: 15px;
+    }
+}
+
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="teddy.jpg" alt="">
+        </div>
+        <div class="right">
+            <div class="img">
+                <img src="box.svg" alt="">
+            </div>
+            <h3>
+                Today is the birthday of the person who is spreading joy and positivity all around. May your birthday
+                and your life be as wonderful as you are!
+            </h3>
+            <button>Push me</button>
+        </div>
+
+    </div>
+</body>
+
+</html>
